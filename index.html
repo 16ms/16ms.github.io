@@ -6,13 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="author" content="https://github.com/ptmt/" />
-  <title>16ms - Making UI predictable perfomance-wise</title>
+  <title>16ms — Making UI predictable perfomance-wise</title>
+  <link rel="apple-touch-icon" sizes="114x114" href="/media/icon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/media/icon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/media/icon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/media/icon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/media/icon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/media/icon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/media/icon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/media/icon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/media/icon/favicon-16x16.png">
+  <link rel="manifest" href="/media/icon/manifest.json">
+  <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" href="spectre.min.css" />
   <link rel="stylesheet" href="spectre-exp.min.css" />
   <style>
     .bg-gray {
-      /*background: rgba(0, 0, 0, 0.1);
-      margin: 5rem;*/
       color: #667189;
       padding: 2rem;
     }
@@ -23,14 +32,12 @@
       align-items: center;
       justify-content: center;
       flex: auto;
-      margin-bottom: 5em;
     }
     .fullscreen-bg {
         top: 0;
         right: 0;
         bottom: 0;
         left: 0;
-        /*overflow: hidden;*/
         z-index: -100;
     }
     .fullscreen-bg__video {
@@ -60,6 +67,9 @@
     .header {
       background: rgba(0, 0, 0, 0.5);
     }
+    .header .column {
+      color: white;
+    }
     .caption {
       position: absolute;
       top: 10px;
@@ -76,11 +86,11 @@
       .fullscreen-bg {
         position: absolute;
         bottom: -20%;
-        background: url('./media/insta.jpg') center center / cover no-repeat;
+        background: url('/media/insta.jpg') center center / cover no-repeat;
       }
       .fullscreen-bgalt {
         position: absolute;
-        background: url('./media/settings.png') center center / cover no-repeat;
+        background: url('/media/settings.png') center center / cover no-repeat;
       }
       .fullscreen-bg__video {
         display: none;
@@ -92,33 +102,34 @@
   <section class="section section-hero bg-gray">
     <div class="caption">Shot in 1000fps</div>
     <div class="fullscreen-bg">
-        <video loop muted autoplay poster="media/insta.jpg" class="fullscreen-bg__video">
-            <source src="media/insta.webm" type="video/webm">
-            <source src="media/insta.mp4" type="video/mp4">
-            <source src="media/insta.ogv" type="video/ogg">
+        <video loop muted autoplay poster="/media/insta.jpg" class="fullscreen-bg__video">
+            <source src="/media/insta.webm" type="video/webm">
+            <source src="/media/insta.mp4" type="video/mp4">
+            <source src="/media/insta.ogv" type="video/ogg">
         </video>
     </div>
     <section id="overview" class="grid-hero container grid-960 text-center">
 
       <div class="header">
-        <h1>16ms</h1>
-        <h3>Tools and practices for predictable UI perfomance</h3>
+        <h1>Dreaming of 16 milliseconds</h1>
+        <h3>Tools and practices for predictable UI performance</h3>
       </div>
 
       <div class="columns">
         <div class="column col-4 col-xs-12">
           <div class="card text-center">
             <div class="card-header">
-              <span class="card-title">Watch regressions</span>
+              <span class="card-title">Watch</span>
             </div>
             <div class="card-body">
-              Do performance tests on CI with
+              Catch regressions on CI with
               <a href="https://github.com/GoogleChrome/lighthouse">LightHouse</a>,
               <a href="https://16ms.github.com/videotape">Videotape</a>,
-               and <a href="#tools">more</a>
+               and <a href="https://github.com/16ms/list">other</a>
             </div>
           </div>
         </div>
+
         <div class="column col-4 col-xs-12">
           <div class="card text-center">
             <div class="card-header">
@@ -126,7 +137,7 @@
             </div>
             <div class="card-body">
               Get insights into what causes dropped frames and latency using
-              <a href="#tools">variaty</a> of tools
+              <a href="https://github.com/16ms/list">variety</a> of tools
             </div>
           </div>
         </div>
@@ -136,43 +147,12 @@
               <span class="card-title">Fix</span>
             </div>
             <div class="card-body">
-              Find simular story about how to eliminate your bottleneck if you can't
+              <a href="https://github.com/16ms/list">Learn</a> from simular stories about how to eliminate your bottleneck
             </div>
           </div>
         </div>
       </div>
     </section>
   </section>
-
-  <section class="container grid-960">
-    <div class="columns">
-       <div class="column col-9 col-sm-12">
-         <div class="card">
-          <div class="card-image">
-            <img src="img/osx-el-capitan.jpg" class="img-responsive" />
-          </div>
-          <div class="card-header">
-            <h4 class="card-title">Microsoft</h4>
-            <h6 class="card-subtitle">Software and hardware</h6>
-          </div>
-          <div class="card-body">
-            Empower every person and every organization on the planet to achieve more.
-          </div>
-          <div class="card-footer">
-            <button class="btn btn-primary">Do</button>
-            <button class="btn btn-primary">Do</button>
-            <button class="btn btn-primary">Do</button>
-          </div>
-        </div>
-         <h3>Learn</h3>
-         <label class="chip">
-            Web
-            <button class="btn btn-clear"></button>
-          </label>
-       </div>
-     </div>
-  </section>
-
-
 </body>
 </html>
